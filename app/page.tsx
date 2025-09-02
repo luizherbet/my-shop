@@ -8,16 +8,19 @@ import { products } from "@/data/products";
 
 export default function Page() {
   const [category, setCategory] = useState("celulares");
+  type Category = keyof typeof products; // "celulares" | "relogios"
+
 
   return (
     <div>
       <Menu active={category} onChange={setCategory} />
 
       <div className="grid gap-4 p-4 md:grid-cols-2">
-        {products[category].map((p) => (
-          <ProductCard key={p.id} product={p} />
-        ))}
-      </div>
+        {products[category as Category].map((p) => (
+        <ProductCard key={p.id} product={p} />
+  ))}
+</div>
+
     </div>
   );
 }
