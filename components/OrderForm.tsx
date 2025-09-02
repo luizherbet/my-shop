@@ -24,7 +24,7 @@ export default function OrderForm({ product, onClose }: any) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mt-2 p-4  rounded-md bg-amber-100"
+      className="mt-2 p-4  rounded-md bg-amber-100 text-center"
     >
       <h4>Encomendar {product.name}</h4>
       <textarea

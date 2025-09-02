@@ -7,7 +7,7 @@ export default function ProductCard({ product }: any) {
   const [showSpecs, setShowSpecs] = useState(false);
 
   return (
-    <div className="p-4 rounded-md w-sm bg-amber-300 flex flex-col items-center">
+    <div className=" border-b-2 pt-4 pb-6  w-sm flex flex-col items-center">
       {/* Imagem */}
       {product.image_url ? (
         <img
@@ -23,7 +23,7 @@ export default function ProductCard({ product }: any) {
 
       {/* Botão Detalhes */}
       {product.specs && (
-        <div className="mb-2 w-full rounded bg-amber-200">
+        <div className="mb-2 w-full rounded bg-blue-100">
           <button
             onClick={() => setShowSpecs(!showSpecs)}
             className="px-3 py-1   flex justify-between w-full"
