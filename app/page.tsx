@@ -6,6 +6,7 @@ import Menu from "@/components/Menu";
 import ProductCard from "@/components/ProductCard";
 import { products } from "@/data/products";
 
+
 export default function Page() {
   const [category, setCategory] = useState("celulares");
   type Category = keyof typeof products; // "celulares" | "relogios"
