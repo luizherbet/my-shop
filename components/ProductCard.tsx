@@ -7,30 +7,32 @@ export default function ProductCard({ product }: any) {
   const [showSpecs, setShowSpecs] = useState(false);
 
   return (
-    <div className="p-4 rounded-md w-sm bg-amber-200 flex flex-col items-start">
+    <div className="p-4 rounded-md w-sm bg-amber-300 flex flex-col items-center">
       {/* Imagem */}
-      {product.image && (
+      {product.image_url ? (
         <img
-          src={product.image}
+          src={product.image_url}
           alt={product.name}
-          className="w-full h-40 object-cover rounded-md mb-2"
+          className="bg-white p-4 rounded-md w-64 h-auto object-cover mb-2 flex "
         />
+      ) : (
+        <div className="w-full h-40 bg-gray-200 mb-2" />
       )}
       {/* Nome */}
       <h3 className="text-lg font-semibold mb-1">{product.name}</h3>
 
       {/* Botão Detalhes */}
       {product.specs && (
-        <div className="mb-2 w-full">
+        <div className="mb-2 w-full rounded bg-amber-200">
           <button
             onClick={() => setShowSpecs(!showSpecs)}
-            className="px-3 py-1 bg-gray-300 rounded hover:bg-gray-400 flex justify-between w-full"
+            className="px-3 py-1   flex justify-between w-full"
           >
             Detalhes
             <span className="font-bold">{showSpecs ? "-" : "+"}</span>
           </button>
           {showSpecs && (
-            <p className="mt-2 text-gray-700 text-sm">{product.specs}</p>
+            <p className="mt-2 text-gray-800 text-sm p-2" >{product.specs}</p>
           )}
         </div>
       )}
