@@ -7,7 +7,7 @@ export default function ProductCard({ product }: any) {
   const [showSpecs, setShowSpecs] = useState(false);
 
   return (
-    <div className=" border-b-2 pt-4 pb-6  w-sm flex flex-col items-center">
+    <div className=" border-b-2 pt-4 pb-6  w-md flex flex-col items-center">
       {/* Imagem */}
       {product.image_url ? (
         <img
@@ -38,7 +38,7 @@ export default function ProductCard({ product }: any) {
       )}
 
       {/* Valor */}
-      <p className="mb-2">R$ {product.price}</p>
+      <p className="mb-2 font-bold text-blue-900 text-xl">R$ {product.price}</p>
 
       {/* Botão Encomendar */}
       <button
