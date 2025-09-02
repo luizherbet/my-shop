@@ -24,7 +24,7 @@ export default function OrderForm({ product, onClose }: any) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mt-2 p-4 border rounded-md bg-gray-50"
+      className="mt-2 p-4  rounded-md bg-amber-100"
     >
       <h4>Encomendar {product.name}</h4>
       <textarea
@@ -37,7 +37,7 @@ export default function OrderForm({ product, onClose }: any) {
       <button
         type="submit"
         disabled={loading}
-        className="mt-2 px-3 py-1 bg-green-500 text-white rounded"
+        className="mt-2 px-3 py-1 bg-orange-700 text-white rounded"
       >
         {loading ? "Enviando..." : "Confirmar Pedido"}
       </button>

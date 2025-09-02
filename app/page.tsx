@@ -15,7 +15,7 @@ export default function Page() {
     <div>
       <Menu active={category} onChange={setCategory} />
 
-      <div className="grid gap-4 p-4 md:grid-cols-2">
+      <div className="grid gap-4 p-4 flex justify-center">
         {products[category as Category].map((p) => (
         <ProductCard key={p.id} product={p} />
   ))}

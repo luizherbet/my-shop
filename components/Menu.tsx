@@ -9,15 +9,15 @@ type MenuProps = {
 
 export default function Menu({ active, onChange }: MenuProps) {
   return (
-    <nav className="flex gap-4 p-4 bg-gray-200">
+    <nav className="flex gap-4 p-4 bg-black justify-center">
       <button
-        className={active === "celulares" ? "font-bold text-blue-600" : ""}
+        className={active === "celulares" ? "font-bold text-yellow-400" : " font-bold text-white"}
         onClick={() => onChange("celulares")}
       >
         Celulares
       </button>
       <button
-        className={active === "relogios" ? "font-bold text-blue-600" : ""}
+        className={active === "relogios" ? "font-bold text-yellow-500" : "font-bold text-white"}
         onClick={() => onChange("relogios")}
       >
         Relógios
